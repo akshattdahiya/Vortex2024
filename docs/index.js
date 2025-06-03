@@ -25,11 +25,25 @@ const iconToggle = () => {
     sunIcon.classList.toggle("display-none");
 };
 
+function darklogo() {
+    const logos = document.querySelectorAll('.logo-switch');
+    logos.forEach(logo => {
+        logo.src = "images/logo dark.png";
+    });
+}
+
+function lightlogo() {
+    const logos = document.querySelectorAll('.logo-switch');
+    logos.forEach(logo => {
+        logo.src = "images/vortex club logo.png";
+    });
+}
 
 // Initial Theme Check
 const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
+        darklogo();
         moonIcon.classList.add("display-none");
         return;
     }
@@ -42,11 +56,13 @@ const themeSwitch = () => {
     if (document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme","light");
+        lightlogo();
         iconToggle();
         return;
     }
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme","dark");
+    darklogo();
     iconToggle();
 };
 
