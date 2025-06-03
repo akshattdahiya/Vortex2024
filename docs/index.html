@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,120 +7,171 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/vortex club logo.png">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
 </head>
 
-<body class="bg-white dark:bg-gray-800">
+<body class="bg-white dark:bg-gray-800 font-helvetica" >
     <header>
-        <nav class="p-5 bg-white dark:bg-gray-900 shadow md:flex md:items-center md:justify-between fixed w-full z-30">
+        <nav class="fixed top-0 w-full z-30 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-md transition-all duration-300 py-2 md:py-4 px-6 md:flex md:items-center md:justify-between">
 
-            <div class="flex justify-between mx-2 items-center">
-                <span class="text-3xl font-bold font-montserrat">
-                    <a class="dark:text-gray-100" href="index.html" class="flex items-center">
-                        <img src="images/vortex club logo.png" alt="Vortex-logo" class="w-14 inline mr-2">
-                        Vortex
-                    </a>
-                </span>
-                <span class="text-3xl cursor-pointer md:hidden">
-                    <img class="w-6 dark:invert" onclick="Menu(this)" src="images/menu-icon.svg" alt="menu-icon" name="menu">
-                </span>
-            </div>
+  <!-- Left: Logo + Menu icon (mobile) -->
+  <div class="flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-gray-100 font-integral hover:scale-110 transition-all duration-300 ease-in-out">
+      <img src="images/vortex club logo.png" alt="Vortex-logo" class="w-12">
+      Vortex
+    </a>
+    <!-- Hamburger Icon for Mobile -->
+    <button class="text-3xl md:hidden focus:outline-none" onclick="Menu(this)">
+      <img src="images/menu-icon.svg" alt="menu-icon" class="w-6 dark:invert">
+    </button>
+  </div>
 
-            <ul class="md:flex md:items-center z-0 md:z-auto md:static absolute bg-white dark:bg-gray-900 w-full left-0 md:w-auto md:py-0 md:my-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]">
-                <li class="mx-4 my-6">
-                    <a href="events.html" class="text-l hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400">EVENTS</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a href="members.html" class="text-l hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400">MEMBERS</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a href="alumni.html" class="text-l hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400">ALUMNI</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a href="schedule.html" class="text-l hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400">SCHEDULE</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a href="result.html" class="text-l hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400">RESULT</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
+  <!-- Right: Menu Items -->
+  <ul class="md:flex md:items-center md:static absolute left-0 w-full md:w-auto bg-white/80 dark:bg-gray-900/90 md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none md:opacity-100 opacity-0 top-[-400px] transition-all duration-300 ease-in-out md:py-0 py-4 md:pl-0 pl-7" id="navLinks">
+    <li class="mx-4 my-4 md:my-0">
+      <a href="events.html" class="nav-link ">EVENTS</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="members.html" class="nav-link">MEMBERS</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="alumni.html" class="nav-link">ALUMNI</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="schedule.html" class="nav-link">SCHEDULE</a>
+    </li>
+    
+    <li class="mx-4 my-6 md:my-0">
                     <img class="moon cursor-pointer w-5" src="images/moon-icon.svg" alt="dark-mode">
                     <img class="sun cursor-pointer w-5 dark:invert" src="images/sun-icon.svg" alt="light-mode">
                 </li>
-            </ul>
+  </ul>
+</nav>
 
-        </nav>
-        <!--end nav-->
     </header>
 
-    <div class="font-montserrat">
-        <div class="w-1/2 h-screen fixed bg-[#00a6fb] -ml-28 md:-ml-28 skew-x-12 -z-20">
+    <div class="">
+        <div class="w-1/2 h-screen fixed bg-cyan-500 dark:bg-cyan-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
             <!--bg div-->
         </div>
-        <main class="flex-col justify-center pt-36">
+
+
+        <div class="fixed w-screen h-screen backdrop-blur-[2px] -z-10"></div>
+        <main class="flex-col justify-center pt-36 ">
             <!--main content-->
-            <div>
-                <!--Vortex section-->
+            <div class="flex flex-col lg:flex-row justify-around items-center w-full lg:h-[70vh] gap-16">
                 <div class="flex justify-center">
                     <img class="w-52 sm:w-80 md:w-96" src="images/vortex club logo.png" alt="Vortex-logo">
                 </div>
-                <div class="flex justify-center text-5xl sm:text-6xl md:text-8xl font-bold text-gray-900 dark:text-gray-100 my-5">Vortex</div>
-                <div class="flex justify-center text-l sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200 my-5">The Mathematics Club Of DPS Rohini</div>
-                <div class="flex justify-center text-l sm:text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 my-5">Just&nbsp;<span>&#8747;</span>du it.</div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                  <div class="flex justify-center text-5xl sm:text-6xl md:text-8xl font-bold text-gray-900 dark:text-gray-100 my-5 tracking-wider font-integral">Vortex</div>
+                  <div class="flex justify-center text-base sm:text-3xl md:text-4xl font-medium text-gray-600 dark:text-gray-300 my-5">The Mathematics Club Of DPS Rohini</div>
+                  <div class="flex justify-center text-base sm:text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 my-5">Just&nbsp;<span>&#8747;</span>du it.</div>
+                  <div class="flex justify-around items-center w-2/3 mt-4">
+                    <a href="" class="mr-4 flex text-sm md:text-lg items-center gap-2 rounded py-4 px-4 bg-[#5865F2] text-white font-medium hover:scale-105 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                      <ion-icon name="logo-discord" class="text-xl"></ion-icon>
+                      Discord
+                    </a>
+                    <a href="" class="flex text-sm md:text-lg items-center gap-2 rounded py-4 px-4 bg-cyan-500 text-white font-medium hover:scale-105 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                      <ion-icon name="document-text"></ion-icon>
+                      Brochure
+                    </a>
+                  </div>
+                </div>
             </div>
 
             <hr class="w-3/4 h-1 my-16 mx-auto bg-gray-400 opacity-50 border-0 rounded-md">
 
             <div class="my-16">
                 <!--About us section-->
-                <div class="flex justify-center text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">About Us</div>
-                <div class="min-[930px]:flex justify-center my-16 mx-8 md:mx-20 2xl:mx-32 text-lg lg:text-xl 2xl:text-2xl text-gray-800 dark:text-gray-100">
-                    <div class="min-[930px]:flex-shrink-0 justify-center my-16 mx-auto md:mx-8">
-                        <img class="min-w-72 min-[930px]:w-96 2xl:w-[550px] my-auto rounded-md hover:shadow-lg" src="images/vortex.jpeg" alt="Vortex :D">
-                    </div>
-                    <div class="flex justify-center text-center md:my-auto align-middle font-medium text-base md:text-lg">
-                        Vortex is a group of students from Delhi Public School, Rohini who share a passion for Mathematics and want to share this with others through various events ranging from problem solving to quizzing. The symposium is an opportunity for the students who wish to expand their horizons of learning and provide a platform for young minds to display their talent and skill in mathematics. It will stimulate a competitive environment and compel participants to push their boundaries in the field of mathematics.
-                    </div>
+                <div class="flex justify-center text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2 font-integral">About Us</div>
+                <div class="flex flex-col lg:flex-row justify-center items-center my-6 mx-8 md:mx-20 2xl:mx-32 text-lg lg:text-xl 2xl:text-2xl text-gray-800 dark:text-gray-100">
+                  <div class="dark:bg-black dark:bg-opacity-20 backdrop-blur-sm bg-gray-300 p-8 md:p-16 rounded-xl bg-opacity-20 flex justify-center text-center md:my-auto align-middle font-semibold leading-loose max-w-prose text-sm md:text-lg hover:scale-105 transition-smooth">
+                    Vortex is a group of students from Delhi Public School, Rohini who share a passion for Mathematics and want to share this with others through various events ranging from problem solving to quizzing. The symposium is an opportunity for the students who wish to expand their horizons of learning and provide a platform for young minds to display their talent and skill in mathematics. It will stimulate a competitive environment and compel participants to push their boundaries in the field of mathematics.
+                  </div>
+                  <div class="flex-shrink-0 flex justify-center my-16 mx-auto md:mx-8">
+                      <img class="min-w-72 md:w-96 2xl:w-[550px] my-auto rounded-md hover:scale-105 transition-all duration-300 ease-in-out" src="images/home vector.png" alt="Vortex :D">
+                  </div>
                 </div>
             </div>
             
             <hr class="w-3/4 h-1 my-16 mx-auto bg-gray-400 opacity-50 border-0 rounded-md">
 
             <div class="my-16">
-                <!--Join discord server section-->
-                <div class="flex justify-center text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">Join our discord server</div>
-                <div class="min-[930px]:flex justify-center my-16 mx-8 md:mx-20 2xl:mx-32 text-lg lg:text-xl 2xl:text-2xl dark:text-gray-100">
-                    <div class="justify-center text-center md:my-auto align-middle text-gray-800 dark:text-gray-100">
-                        <div class="font-medium text-base md:text-lg">
-                            Join our Discord server to get notified about the events. We will be conducting the events via Discord. We are always open to assisting anyone regarding any event planned by Vortex.
-                        </div>
-                        <div class="flex-none my-6">
-                            <button class="bg-[#023e8a] hover:bg-[#0077b6] text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded hover:rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300">
-                                Join Discord Server
-                            </button>
-                        </div>
+                <!-- socials -->
+                <div class="flex flex-col lg:flex-row justify-center-items-center mx-16">
+                  <div class="flex items-center justify-center w-full lg:w-2/5">
+                    <img src="images/socials.png" alt="" class="hidden lg:block">
+                  </div>
+                  <div class="flex flex-col items-center justify-center flex-1">
+                    <div class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-100 mb-2 font-integral py-10 text-center">STAY IN THE LOOP</div>
+                    <div class="text-md md:text-lg text-gray-900 dark:text-gray-300 mb-4 font-semibold max-w-prose text-center">
+                      Follow us on our socials for the latest updates, mind-bending math challenges, event highlights, and behind-the-scenes moments from the vibrant Vortex community at DPS Rohini. Whether you're a puzzle enthusiast, a quiz whiz, or just someone who loves exploring the beauty of numbers, our socials are your gateway to the action.
+                      Be part of a growing network of young minds driven by curiosity, creativity, and a passion for mathematics. Let’s learn, compete, and celebrate the joy of problem-solving — together.
                     </div>
-                    <div class="min-[930px]:flex-shrink-0 justify-center my-16 mx-auto md:mx-8">
-                        <iframe class="mx-auto w-72 md:w-auto" src="https://discord.com/widget?id=1234188046522646569&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    <div class="flex items-center justify-around gap-4 py-4">
+
+                      <!-- Discord -->
+                      <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-[#5865F2] text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-discord" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-16 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          Discord
+                        </span>
+                      </a>
+
+                      <!-- Instagram -->
+                      <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-instagram" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-14 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          Instagram
+                        </span>
+                      </a>
+
+                      <!-- Facebook -->
+                      <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-[#1877F2] text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-facebook" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-14 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          Facebook
+                        </span>
+                      </a>
+
+                      <!-- YouTube -->
+                      <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-[#FF0000] text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-youtube" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-14 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          YouTube
+                        </span>
+                      </a>
+
                     </div>
-                </div>
-            </div>
 
-            <hr class="w-3/4 h-1 my-16 mx-auto bg-gray-400 opacity-50 border-0 rounded-md">
-
-            <div class="my-16 flex justify-center">
-                <!--Invite Link-->
-                <div class="dark:text-gray-100 font-semibold my-4">
-                    <a href="vortex_invite_24.pdf" target="_blank" class="text-lg hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400">For more information, please click here to view the Invite.</a>
                 </div>
-            </div>
+
+              </div>        
 
         </main>
     </div>
 
-    <footer class="relative bg-[#023e8a] pt-8 pb-6">
+    <footer class="relative bg-cyan-600 dark:bg-cyan-800 pt-8 pb-6">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
-              <h4 class="text-3xl fonat-semibold text-gray-200">Vortex</h4>
+              <h4 class="text-3xl font-semibold text-gray-200 font-integral uppercase">Vortex</h4>
               <h5 class="text-lg my-1 text-gray-200">
                 The Mathematics Club Of DPS Rohini
               </h5>
@@ -127,6 +179,9 @@
                 Just&nbsp;<span>&#8747;</span>du it.
               </h3>
               <div class="mt-6 lg:mb-0 mb-6">
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="" target="_blank"><i class="fab fa-discord"></i></a>
+                </button>
                 <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
                   <a href="https://www.instagram.com/vortex_dpsr/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </button>
@@ -158,9 +213,7 @@
                     <li>
                         <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="schedule.html">Schedule</a>
                     </li>
-                    <li>
-                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="result.html">Result</a>
-                    </li>
+                    
                     
                   </ul>
                 </div>
@@ -174,7 +227,7 @@
                 Copyright © <a href="index.html" class="hover:text-gray-400" target="_blank"> Vortex.</a> All rights reserved.
               </div>
               <div class="text-sm font-semibold py-1">
-                Made with &#9829; by Akshatt Dahiya.
+                Made with &#9829; by Rishit Narang &#38; Akshatt Dahiya.
               </div>
             </div>
           </div>
@@ -183,8 +236,16 @@
 
     <script>
         function Menu(e) {
-            let list = document.querySelector('ul');
-            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+            const list = document.querySelector('ul');
+            const isOpen = e.classList.contains('menu-open');
+
+            if (isOpen) {
+                e.classList.remove('menu-open');
+                list.classList.remove('top-[80px]', 'opacity-100');
+            } else {
+                e.classList.add('menu-open');
+                list.classList.add('top-[80px]', 'opacity-100');
+            }
         }
     </script>
     <script src="index.js"></script>

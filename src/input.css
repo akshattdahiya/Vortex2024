@@ -5,6 +5,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url('fonts/Helvetica.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Integral';
+  src: url('fonts/Integral.otf') format('opentype');
+}
+
 .display-none {
     @apply hidden;
+}
+
+
+.nav-link {
+  @apply relative text-base font-medium text-gray-800 dark:text-gray-200 
+         hover:text-sky-500 dark:hover:text-sky-400
+         hover:scale-125 dark:hover:scale-125 ;
+}
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #0ea5e9; /* sky-500 */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+#navLinks li  {
+  @apply hover:scale-105 hover:-translate-y-[1px] transition-all duration-300 ease-in-out;
+}
+
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.members-grid {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.members-grid-small {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 5rem;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.members {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.member {
+    text-align: center;
+}
+
+.member__img {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.2) 0px 6px 10px -2px, rgba(0, 0, 0, 0.3) 0px 3px 10px -3px;
+        @apply transition-transform duration-300 ease-in-out object-cover;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        .member__img {
+          width: 12rem;
+          height: 12rem; } }
+
+    .member__text {
+        overflow: hidden;
+    }
+
+    .member__name {
+        font-size: 1.5rem;
+        position: relative;
+        top: 1rem;
+        transition: all .2s ease-in-out;
+        @apply font-semibold text-gray-800 dark:text-gray-200;
+    }
+
+    .member__post {
+        position: relative;
+        font-size: 1.2rem;
+        top: 4rem;
+        transition: all .2s ease-in-out;
+        @apply text-gray-600 dark:text-gray-300;
+    }
+
+  
+
+    .member:hover .member__img {
+        transform: scale(1.05);
+        transition: all .2s ease-in-out;
+    }
+
+    .member:hover .member__name {
+        top: -4rem;
+    }
+
+    .member:hover .member__post {
+        top: -1.2rem;
+    }
+
+
+
+
+    
+
+/* Base scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-1
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyan-500 dark:bg-cyan-600 rounded-full transition-all duration-300 ease-in-out; /* Cyan color for the thumb */
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cyan-700 dark:bg-cyan-800; /* Darker cyan on hover */
 }
