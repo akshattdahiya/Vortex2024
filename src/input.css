@@ -114,10 +114,10 @@
 
   
 
-    .member:hover .member__img {
+    /* .member:hover .member__img {
         transform: scale(1.05);
         transition: all .2s ease-in-out;
-    }
+    } */
 
     .member:hover .member__name {
         top: -4rem;
@@ -130,7 +130,7 @@
 
 
 
-    
+
 
 /* Base scrollbar styling */
 ::-webkit-scrollbar {
