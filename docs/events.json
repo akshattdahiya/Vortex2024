@@ -3,13 +3,13 @@
     "id": 1,
     "title": "Fractal Frames",
     "subtitle": "Painting/Graphic Design",
-    "description": "Love to paint and puzzle over patterns? Then Fractal Frames is calling your name! This creative challenge invites you to blend visual art with mathematics by submitting a painting that brings a math concept to life. Submit a high-quality photo or scanned image of your artwork. Use any medium—watercolors, acrylics, pastels, digital—your canvas, your rules. Your piece should clearly reflect a mathematical theme or idea. Pick your inspiration from these suggested themes:\n1) Geometry in Nature or Architecture\n2) Symmetry and Reflections\n3) Mathematical Patterns (like Tessellations or Fractals)\n4) Numbers and Emotions\n5) The Beauty of Pi\n6) Math in Daily Life\n7) Golden Ratio and Proportion\n8) Graphs and Visual Data",
+    "description": "Love to design pattern puzzles? Then Fractal Frames is calling your name! This creative challenge invites you to blend visual art with mathematics by submitting a painting that reinforces a mathematical concept. Submit a high-quality photo or scanned image of your artwork. Use any medium—watercolors, acrylics, pastels, digital patterns—it’s your canvas, your rules. Your piece should clearly reflect a mathematical theme or idea.\nPick your inspiration from following:\n1) Geometry in Nature or Architecture\n2) Symmetry and Reflections\n3) Mathematical Patterns (like Tessellations or Fractals)\n4) Numbers and Emotions\n5) The Beauty of Pi\n6) Math in Daily Life\n7) Golden Ratio and Proportion\n8) Graphs and Visual Data",
     "details": {
       "team_size": 2,
       "teams_per_school": 1,
       "eligibility": "Classes IV-V",
-      "deadline": "00 July 2025",
-      "submission_link": ""
+      "deadline": "20 July 2025",
+      "submission_link": "https://tinyurl.com/FF2025"
     }
   },
   {
@@ -20,27 +20,16 @@
     "details": {
       "team_size": 6,
       "teams_per_school": 1,
-      "eligibility": "Classes VI-VIII",
-      "deadline": "00 July 2025",
-      "submission_link": ""
+      "eligibility": "Classes VI-IX",
+      "deadline": "20 July 2025",
+      "submission_link": "https://tinyurl.com/MT2025"
     }
   },
   {
     "id": 3,
     "title": "X-Quest",
     "subtitle": "Quiz",
-    "description": "Love a good challenge? Then this quiz is for you. Get ready to put your math skills to the test with mindboggling puzzles and brainteasers that will make you think, laugh and maybe even scratch your head. The preliminary round will be held on Google Forms with the fastest submissions given preference. The top 6 teams will reach the finals held over Zoom.",
-    "details": {
-      "team_size": 2,
-      "teams_per_school": 1,
-      "eligibility": "Classes VII–VIII"
-    }
-  },
-  {
-    "id": 4,
-    "title": "Word-X",
-    "subtitle": "Crossword",
-    "description": "An engrossing series of cryptic questions, where basic math knowledge accompanied by a sense of humor will surely seal the deal. An online preliminary round will be held on Google Forms and the finals would be held online over Zoom.",
+    "description": "Love a good challenge? Then this quiz is for you. Get ready to put your math skills to the test with mindboggling puzzles and brainteasers that will make you think, laugh and maybe even scratch your head. The preliminary round will be held using Google Forms with the fastest submissions given preference. The top 6 teams will reach the finals held on Zoom.",
     "details": {
       "team_size": 2,
       "teams_per_school": 1,
@@ -48,10 +37,21 @@
     }
   },
   {
+    "id": 4,
+    "title": "Word-X",
+    "subtitle": "Crossword",
+    "description": "An engrossing series of cryptic questions, where basic math knowledge accompanied by a sense of humor will surely seal the deal. An online preliminary round will be held using Google Forms and the finals would be held online on Zoom.",
+    "details": {
+      "team_size": 2,
+      "teams_per_school": 1,
+      "eligibility": "Classes XI-XII"
+    }
+  },
+  {
     "id": 5,
     "title": "X-Solving",
     "subtitle": "Problem Solving",
-    "description": "Test your problem-solving skills against the most difficult problems, competing against the best of the best. Consists of a single round held over Zoom.",
+    "description": "Test your problem-solving skills solving the most difficult problems, competing against the best of the best. The event consists of a single round held on Zoom.",
     "details": {
       "team_size": 2,
       "teams_per_school": 1,
@@ -62,13 +62,13 @@
     "id": 6,
     "title": "War-Tex",
     "subtitle": "Group Discussion",
-    "description": "Participants are required to speak and record themselves and upload it as an unlisted video on YouTube on the above topic for a maximum time of 2 minutes. The topic is left up to your interpretation. You have to take a clear stance on the issue and defend yourselves and it can be entirely up to your judgment and assessment of the topic. Each participant will have 90 seconds to present their opening statements. Following the opening statements, there will be a 15-minute discussion session.",
+    "description": "For the prelims, participants are required to speak and record themselves and upload their video as an unlisted video on YouTube on a topic of their choice not exceeding 2 minutes. Participants have to take a clear stance on the issue and defend themselves, based on their own judgment and interpretation of the topic.\n\nThe final round will be held via Zoom. Shortlisted participants will be given 10 minutes to prepare after the prompt is released. Each participant will have 90 seconds to present their opening statements. This will be followed by a 15-minute discussion session.",
     "details": {
       "team_size": 1,
       "teams_per_school": 1,
-      "eligibility": "Classes IX-XII",
-      "deadline": "00 July 2025",
-      "submission_link": ""
+      "eligibility": "Classes XI-XII",
+      "deadline": "20 July 2025",
+      "submission_link": "https://tinyurl.com/WARTEX2025"
     }
   },
   {

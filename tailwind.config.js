@@ -12,7 +12,9 @@ module.exports = {
         opensans : ['Open Sans'],
         helvetica : ['Helvetica'],
         integral : ['Integral'],
-        }
+        },
+
+      overscrollBehavior: ['responsive']
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
